@@ -5,8 +5,13 @@ project(quiltprojectgen LANGUAGES CXX)
 set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
-
-
 add_executable(${PROJECT_NAME}
     main.cpp
 )
+
+include(CTest)
+
+add_test(NAME BasicFunctionality COMMAND ${PROJECT_NAME} CTest)
+
+add_test(NAME CloningInFilledRepo COMMAND ${PROJECT_NAME} CTest)
+set_property(TEST CloningInFilledRepo PROPERTY WILL_FAIL true)
