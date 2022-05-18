@@ -13,7 +13,7 @@ add_executable(${PROJECT_NAME}
 
 include(CTest)
 
-add_test(NAME BasicFunctionality COMMAND ${PROJECT_NAME} test/CTest)
+add_test(NAME BasicFunctionality COMMAND ${PROJECT_NAME} test/CTest -r)
 
 # add_test(NAME CloningInFilledRepo COMMAND ${PROJECT_NAME} test/CTest)
 # set_property(TEST CloningInFilledRepo PROPERTY WILL_FAIL true)
