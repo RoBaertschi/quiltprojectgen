@@ -8,7 +8,7 @@ namespace qpg
         std::string cloneString{"git clone https://github.com/QuiltMC/quilt-template-mod " + nameOfDir};
         int returnValue{std::system(cloneString.c_str())};
         if(returnValue != 0) {
-            throw std::invalid_argument("Error ocoured while running git. ERROR: " + returnValue);
+            throw std::invalid_argument("Error ocoured while running git. ERROR: " + std::to_string(returnValue));
         }
         std::filesystem::remove_all(nameOfDir + "/.git");
     }
