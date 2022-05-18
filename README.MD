@@ -13,7 +13,7 @@ cd quiltprojectgen
 mkdir build && cd build
 cmake ..
 cmake --build .
-# Run Tests. If one fails Remove the test directory in your build directory
+# Run Tests.
 ctest .
 ```
 
