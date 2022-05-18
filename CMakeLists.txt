@@ -6,7 +6,9 @@ set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 add_executable(${PROJECT_NAME}
-    main.cpp
+    src/main.cpp
+    src/Clone.cpp
+    include/Clone.hpp
 )
 
 include(CTest)
