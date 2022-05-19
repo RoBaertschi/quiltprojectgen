@@ -2,11 +2,11 @@
 
 ## Supported Versions
 
-At the moment only 1.0.0 is supported
+At the moment only 1.0.x is supported
 
 | Version | Supported          |
 | ------- | ------------------ |
-| 1.0.0   | :white_check_mark: |
+| 1.0.x   | :white_check_mark: |
 
 ## Reporting a Vulnerability
 
