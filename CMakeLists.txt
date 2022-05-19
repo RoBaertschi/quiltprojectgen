@@ -19,3 +19,7 @@ add_test(NAME BasicFunctionality COMMAND ${PROJECT_NAME} test/CTest -d -r)
 
 # add_test(NAME CloningInFilledRepo COMMAND ${PROJECT_NAME} test/CTest)
 # set_property(TEST CloningInFilledRepo PROPERTY WILL_FAIL true)
+
+install(TARGETS ${PROJECT_NAME} CONFIGURATIONS Release DESTINATION bin)
+include(CPack)
+

@@ -15,7 +15,7 @@ int main(int argc, char *argv[])
             {
                 for (size_t i = 2; i < argc; i++)
                 {
-                    if (std::string{"-r"}.compare(argv[i]))
+                    if (std::string{"-r"}.compare(argv[i]) == 0)
                     {
                         try
                         {
@@ -26,12 +26,15 @@ int main(int argc, char *argv[])
                             std::cerr << "There is no Directory called " + std::string{argv[1]} << std::endl;
                             std::cerr << e.what() << '\n';
                         }
-                    } else if (std::string{"-d"}.compare(argv[i]))
+                    }else if (std::string{"-d"}.compare(argv[i]) == 0)
                     {
                         flag = qpg::Flag::deleteDirAfterwards;
                         std::cout << "WARN: Only use -d for testing." << std::endl;
+                    } else 
+                    {
+                        throw std::invalid_argument(std::string{"There are wrong Argumments!!\n"} + 
+            std::string{"quiltprojectgen <PATH> [-r]\n"});
                     }
-                    
                     
                 }
                 
@@ -41,7 +44,9 @@ int main(int argc, char *argv[])
             
             std::string path{argv[1]};
             qpg::cloneRepo(path);
-            std::filesystem::remove_all(path);
+            if(flag == qpg::Flag::deleteDirAfterwards ){
+                std::filesystem::remove_all(path);
+            }
         }
         else
         {
