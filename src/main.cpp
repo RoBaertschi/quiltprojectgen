@@ -7,14 +7,16 @@
 
 qpg::Flag flag = qpg::Flag::none;
 
+
+
 int main(int argc, char *argv[])
 {
     try {
         if(argc >= 2) {
-            std::cout << std::string{argv[1]}.find(";") << std::endl;
-            if (std::string{argv[1]}.find(";") != std::string::npos)
+            std::string path{argv[1]};
+            if (path.find(";") != std::string::npos or path.find("&") != std::string::npos or path.find("|") != std::string::npos)
             {
-                throw std::invalid_argument("Error no ; allowed");
+                throw std::invalid_argument("Error no ; or & or | allowed");
             }
             
 
