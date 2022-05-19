@@ -11,6 +11,13 @@ int main(int argc, char *argv[])
 {
     try {
         if(argc >= 2) {
+            std::cout << std::string{argv[1]}.find(";") << std::endl;
+            if (std::string{argv[1]}.find(";") != std::string::npos)
+            {
+                throw std::invalid_argument("Error no ; allowed");
+            }
+            
+
             if (argc >= 3)
             {
                 for (size_t i = 2; i < argc; i++)
@@ -33,7 +40,7 @@ int main(int argc, char *argv[])
                     } else 
                     {
                         throw std::invalid_argument(std::string{"There are wrong Argumments!!\n"} + 
-            std::string{"quiltprojectgen <PATH> [-r]\n"});
+                            std::string{"quiltprojectgen <PATH> [-r]\n"});
                     }
                     
                 }
