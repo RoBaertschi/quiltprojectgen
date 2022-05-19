@@ -5,7 +5,7 @@ A Project Generator for [QuiltMC](https://quiltmc.org/).
 
 Dependencies:
 * CMake >= 3.5
-* C++ Compiler
+* C++17 Compiler
 
 ```sh
 git clone https://github.com/RoBaertschi/quiltprojectgen
@@ -26,3 +26,4 @@ Todo:
 - [ ] Templates
 - [ ] Better Code
 - [ ] Install target
+- [ ] C++14 Support
