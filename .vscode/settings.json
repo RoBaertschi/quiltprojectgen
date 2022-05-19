@@ -1,6 +1,22 @@
 {
     "C_Cpp.default.configurationProvider": "ms-vscode.cmake-tools",
     "files.associations": {
-        "iostream": "cpp"
+        "iostream": "cpp",
+        "string": "cpp",
+        "__hash_table": "cpp",
+        "__locale": "cpp",
+        "__string": "cpp",
+        "compare": "cpp",
+        "concepts": "cpp",
+        "filesystem": "cpp",
+        "iterator": "cpp",
+        "string_view": "cpp",
+        "tuple": "cpp",
+        "typeinfo": "cpp",
+        "vector": "cpp",
+        "version": "cpp",
+        "*.tcc": "cpp",
+        "bitset": "cpp",
+        "ostream": "cpp"
     }
 }

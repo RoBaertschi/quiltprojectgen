@@ -2,28 +2,58 @@
 #include <filesystem>
 #include <string>
 
-#include "../include/Clone.hpp"
+#include "Clone.hpp"
+#include "Flags.hpp"
+
+qpg::Flag flag = qpg::Flag::none;
 
 int main(int argc, char *argv[])
 {
     try {
         if(argc >= 2) {
-            if (argc >= 3 && std::string{"-r"}.compare(argv[1]))
+            std::cout << std::string{argv[1]}.find(";") << std::endl;
+            if (std::string{argv[1]}.find(";") != std::string::npos)
             {
-                try
+                throw std::invalid_argument("Error no ; allowed");
+            }
+            
+
+            if (argc >= 3)
+            {
+                for (size_t i = 2; i < argc; i++)
                 {
-                    std::filesystem::remove_all(argv[1]);
+                    if (std::string{"-r"}.compare(argv[i]) == 0)
+                    {
+                        try
+                        {
+                            std::filesystem::remove_all(argv[1]);
+                        }
+                            catch(const std::exception& e)
+                        {
+                            std::cerr << "There is no Directory called " + std::string{argv[1]} << std::endl;
+                            std::cerr << e.what() << '\n';
+                        }
+                    }else if (std::string{"-d"}.compare(argv[i]) == 0)
+                    {
+                        flag = qpg::Flag::deleteDirAfterwards;
+                        std::cout << "WARN: Only use -d for testing." << std::endl;
+                    } else 
+                    {
+                        throw std::invalid_argument(std::string{"There are wrong Argumments!!\n"} + 
+                            std::string{"quiltprojectgen <PATH> [-r]\n"});
+                    }
+                    
                 }
-                catch(const std::exception& e)
-                {
-                    std::cerr << "There is no Directory called " + std::string{argv[1]} << std::endl;
-                    std::cerr << e.what() << '\n';
-                }
+                
+                
                 
             }
             
             std::string path{argv[1]};
             qpg::cloneRepo(path);
+            if(flag == qpg::Flag::deleteDirAfterwards ){
+                std::filesystem::remove_all(path);
+            }
         }
         else
         {
