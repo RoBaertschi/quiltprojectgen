@@ -5,7 +5,6 @@ project(quiltprojectgen LANGUAGES CXX)
 set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
-add_subdirectory(libgit2)
 
 add_executable(${PROJECT_NAME}
     src/main.cpp
@@ -15,7 +14,6 @@ target_include_directories(${PROJECT_NAME}
     PRIVATE include
 )
 
-target_link_libraries(${PROJECT_NAME} PRIVATE libgit2)
 include(CTest)
 
 add_test(NAME BasicFunctionality COMMAND ${PROJECT_NAME} test/CTest -d -r)
