@@ -51,7 +51,6 @@ int main(int argc, char *argv[])
                 
             }
             
-            std::string path{argv[1]};
             qpg::cloneRepo(path);
             if(flag == qpg::Flag::deleteDirAfterwards ){
                 std::filesystem::remove_all(path);
