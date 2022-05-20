@@ -18,8 +18,6 @@ int main(int argc, char *argv[])
             {
                 throw std::invalid_argument("Error no ; or & or | allowed");
             }
-            
-
             if (argc >= 3)
             {
                 for (size_t i = 2; i < argc; i++)
@@ -51,7 +49,6 @@ int main(int argc, char *argv[])
                 
             }
             
-            std::string path{argv[1]};
             qpg::cloneRepo(path);
             if(flag == qpg::Flag::deleteDirAfterwards ){
                 std::filesystem::remove_all(path);
