@@ -1,0 +1,7 @@
+project = quiltprojectgen
+
+using version
+using config
+using test
+using install
+using dist
