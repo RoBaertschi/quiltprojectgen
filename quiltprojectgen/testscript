@@ -1,4 +1,4 @@
 : basics
 :
-$* 'World' >'Hello, World!'
+$* 'World' >'Cloning into 'World'...'
 
