@@ -16,26 +16,6 @@ on:
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
-  build-windows:
-    runs-on: windows-latest
-    
-    steps:
-        - uses: actions/checkout@v3
-        - name: Setup build2
-          # You may pin to the exact commit or the version.
-          # uses: build2/setup-build2-github-action@c678f542e81ffe2aaa271b54039b06fbe26ccb5d
-          uses: build2/setup-build2-github-action@v2
-          with:
-          # Version spec of the version to use. Can be "latest", "staged", "0.14.0", etc.
-            build2-version: latest
-            # Trust key for build2 installation.
-            build2-trust: 70:64:FE:E4:E0:F3:60:F1:B4:51:E1:FA:12:5C:E0:B3:DB:DF:96:33:39:B9:2E:E5:C2:68:63:4C:A6:47:39:43
-            # Compiler used to compile build2 in Windows runners. Can be "msvc", "mingw" or "clang".
-            build2-windows-compiler: msvc
-        - name: Running Build2
-        - run: bdep init -C -n msvc cc config.cxx=cl.exe
-        - run: b
-        - run: b test
 
   # This workflow contains a single job called "build"
   build-ubuntu:
