@@ -2,8 +2,8 @@
 #include <filesystem>
 #include <string>
 
-#include "../include/Clone.hpp"
-#include "../include/Flags.hpp"
+#include <quiltprojectgen/Clone.hpp>
+#include <quiltprojectgen/Flags.hpp>
 
 qpg::Flag flag = qpg::Flag::none;
 

@@ -3,4 +3,4 @@ libs =
 
 exe{quiltprojectgen}: {hxx ixx txx cxx}{**} $libs testscript
 
-cxx.poptions =+ "-I$out_root" "-I$src_root"
+cxx.poptions =+ "-I$out_root" "-I$src_root" "-I$src_root/include"

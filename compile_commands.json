@@ -1,0 +1,40 @@
+[
+ {
+  "directory": "/Users/robin.baertschi/quiltprojectgen",
+  "arguments": [
+   "g++-11",
+   "-I/Users/robin.baertschi/quiltprojectgen-gcc/quiltprojectgen",
+   "-I/Users/robin.baertschi/quiltprojectgen",
+   "-I/Users/robin.baertschi/quiltprojectgen/include",
+   "-std=c++2a",
+   "-idirafter",
+   "/usr/local/include",
+   "-o",
+   "../quiltprojectgen-gcc/quiltprojectgen/quiltprojectgen/quiltprojectgen.o",
+   "-c",
+   "-x",
+   "c++",
+   "/Users/robin.baertschi/quiltprojectgen/quiltprojectgen/quiltprojectgen.cpp"
+  ],
+  "file": "/Users/robin.baertschi/quiltprojectgen/quiltprojectgen/quiltprojectgen.cpp"
+ },
+ {
+  "directory": "/Users/robin.baertschi/quiltprojectgen",
+  "arguments": [
+   "g++-11",
+   "-I/Users/robin.baertschi/quiltprojectgen-gcc/quiltprojectgen",
+   "-I/Users/robin.baertschi/quiltprojectgen",
+   "-I/Users/robin.baertschi/quiltprojectgen/include",
+   "-std=c++2a",
+   "-idirafter",
+   "/usr/local/include",
+   "-o",
+   "../quiltprojectgen-gcc/quiltprojectgen/quiltprojectgen/Clone.o",
+   "-c",
+   "-x",
+   "c++",
+   "/Users/robin.baertschi/quiltprojectgen/quiltprojectgen/Clone.cpp"
+  ],
+  "file": "/Users/robin.baertschi/quiltprojectgen/quiltprojectgen/Clone.cpp"
+ }
+]

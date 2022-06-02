@@ -1,4 +1,4 @@
-#include "../include/Clone.hpp"
+#include <quiltprojectgen/Clone.hpp>
 #include <iostream>
 #include <filesystem>
 
