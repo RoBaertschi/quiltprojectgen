@@ -1,6 +1,6 @@
 : 1
 name: quiltprojectgen
-version: 0.1.0-a.1.z
+version: 0.1.0-a.2
 summary: quiltprojectgen C++ executable
 license: other: proprietary ; Not free/open source.
 description-file: README.md
